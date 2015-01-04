@@ -41,6 +41,19 @@
 			vagrant@db$ sudo apt-get update
 			vagrant@db$ sudo apt-get install mysql-server
 
+			Criar um arquivo de configuracao do mysql com o comando 
+				vagrant@db$ sudo nano /etc/mysql/conf.d/allow_external.cnf
+
+				e conteudo .:
+				[mysqld]
+					bind-address = 0.0.0.0
+
+			depois reiniciar o serviço do mysql
+				vagrant@db$ sudo service mysql restart
+
+
+
+
 	2.4 Build e deploy da aplicação ---> 28
 
 
