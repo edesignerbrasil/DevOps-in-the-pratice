@@ -27,6 +27,7 @@
 		http://www.vagrantbox.es/ (Boxes para baixar)
 		https://vagrantcloud.com/
 
+		Criando o arquivo inicial Vagrantfile
 
 	2.3 Configurando dependências nos servidores de produção ---> 20
 	2.4 Build e deploy da aplicação ---> 28
