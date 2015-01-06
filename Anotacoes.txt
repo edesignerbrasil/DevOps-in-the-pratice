@@ -229,3 +229,51 @@
 			$ vagrant destroy db
 			recebimento de alerta, proxima parte automatizar mais e mais
 
+	4 - Infraestrutura como código
+		
+		4.1 - Provisionamento, configuração ou deploy?
+		
+			Provisionamento explicaçao detalhada
+
+		4.2 - Ferramentas de gerenciamento de configuração
+		4.3 - Introdução ao Puppet: recursos, provedores, manifestos e dependências
+		4.4 - Reinstalando o servidor de banco de dados
+		4.5 - Reinstalando o servidor web
+		4.6 - Fazendo deploy da aplicação
+
+	5 - Puppet além do básico
+		5.1 - Classes e tipos definidos
+		5.2 - Empacotamento e distribuição usando módulos
+		5.3 - Refatorando o código Puppet do servidor web
+		5.4 - Separação de responsabilidades: infraestrutura vs. aplicação
+		5.5 - Puppet forge: reutilizando módulos da comunidade
+		5.6 - Conclusão
+
+	6 - Integração contínua
+		6.1 - Práticas de engenharia ágil
+		6.2 - Começando pelo básico: controle de versões
+		6.3 - Automatizando o build do projeto
+		6.4 - Testes automatizados: diminuindo risco e aumentando a confiança
+		6.5 - O que é integração contínua?
+		6.6 - Provisionando um servidor de integração contínua
+		6.7 - Configurando o build da loja virtual
+		6.8 - Infraestrutura como código para o servidor de integração contínua
+
+	7 - Pipeline de entrega
+		7.1 - Afinidade com a infraestrutura: usando pacotes nativos
+		7.2 - Integração contínua do código de infraestrutura
+		7.3 - Pipeline de entrega
+		7.4 - Próximos Passos
+
+	8 - Tópicos avançados
+		8.1 - Fazendo deploy na nuvem
+		8.2 - DevOps além das ferramentas
+		8.3 - Sistemas avançados de monitoramento
+		8.4 - Pipelines de entrega complexas
+		8.5 - Gerenciando mudanças no banco de dados
+		8.6 - Orquestração de deploy
+		8.7 - Gerenciando configurações por ambiente
+		8.8 - Evolução arquitetural
+		8.9 - Segurança
+		8.10 - Conclusão
+
