@@ -17,5 +17,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   end
 
+  config.vm.define :monitor do |monitor_config|
+      monitor_config.vm.network :private_network, :ip => "192.168.33.14"
+
+  end
+
 
 end

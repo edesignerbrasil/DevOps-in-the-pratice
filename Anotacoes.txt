@@ -115,8 +115,27 @@
 	3 - Monitoramento
 		
 		3.1 - Instalando o servidor de monitoramento
-		
 
+			Inlcuindo info no Vagrantfile
+
+				config.vm.define :monitor do |monitor_config|
+					monitor_config.vm.network :private_network, :ip => "192.168.33.14"
+				end
+
+				vagrant up
+
+			Precisamos configura o sistema do seervidor monitor para utilizar a ultima versao do nagios
+				vagrant@monitor$ echo "Package: nagios* Pin: release n=raring Pin-Priority: 990" | sudo tee /etc/apt/preferences.d/nagios
+				vagrant@monitor$ echo "deb http://archive.ubuntu.com/ubuntu raring main" | sudo tee /etc/apt/sources.list.d/raring.list
+				vagrant@monitor$ sudo apt-get update
+
+			Agora instalamos o nagios >>
+				vagrant@monitor$ sudo apt-get install nagios3
+
+			Verificar se ocorreu tudo bem >>
+				http://nagiosadmin:secret@192.168.33.14/nagios3
+				http://192.168.33.14/nagios3/
+		
 		3.2 - Monitorando outros servidores
 		3.3 - Explorando os comandos de verificação do Nagios
 		3.4 - Adicionando verificações mais específicas
