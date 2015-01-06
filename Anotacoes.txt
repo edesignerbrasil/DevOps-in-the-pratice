@@ -64,6 +64,12 @@
 			Testando se o usuario foi criado corretamente >>
 				vagrant@db$ mysql -u loja -p loja_schema -e "select database(), user()"
 
+		Servidor web
+
+			Instalando o tomcat >>
+				vagrant@web$ sudo apt-get update
+				vagrant@web$ sudo apt-get install tomcat7 mysql-client
+
 	2.4 Build e deploy da aplicação ---> 28
 
 
