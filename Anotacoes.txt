@@ -236,6 +236,9 @@
 			Provisionamento explicaçao detalhada
 
 		4.2 - Ferramentas de gerenciamento de configuração
+
+			Detalhes...
+		
 		4.3 - Introdução ao Puppet: recursos, provedores, manifestos e dependências
 		4.4 - Reinstalando o servidor de banco de dados
 		4.5 - Reinstalando o servidor web
