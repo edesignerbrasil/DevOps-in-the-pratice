@@ -225,6 +225,7 @@
 
 		3.6 - Um problema atinge produção, e agora?
 
-
-
+			vagrant@monitor$ logout
+			$ vagrant destroy db
+			recebimento de alerta, proxima parte automatizar mais e mais
 
