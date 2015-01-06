@@ -207,8 +207,22 @@
 				vagrant@monitor$ /usr/lib/nagios/plugins/check_http --help
 			acrescetando mais itens 51-52 depois lembrar de recarregar o nagios
 
-
 		3.5 - Recebendo alertas
+
+			Verificadando a definicao de alerta do nagios
+				vagrant@monitor$ cat /etc/nagios3/commands.cfg
+			Periodos de envios de alerta
+				vagrant@monitor$ cat /etc/nagios3/conf.d/timeperiods_nagios2.cfg
+			Quem recebe
+				vagrant@monitor$ cat /etc/nagios3/conf.d/contacts_nagios2.cfg
+			Fazer o reload do arquivo depois de alterar quem ira receber o email
+				vagrant@monitor$ sudo service nagios3 reload
+				
+			Para verificar se esta funcionando o envio de email
+				vagrant@monitor$ sudo service ssh stop
+			depois volta
+				vagrant@monitor$ sudo service ssh start
+
 		3.6 - Um problema atinge produção, e agora?
 
 
