@@ -194,6 +194,20 @@
 				DISK OK - free space: / 74473 MB (97% inode=99%); ...
 
 		3.4 - Adicionando verificações mais específicas
+
+			e configuração /etc/nagios3/conf.d/loja_virtual.cfg na pg 48
+
+			verificando os argumentos aceitaveis >>
+				vagrant@monitor$ /usr/lib/nagios/plugins/check_mysql --help
+
+			acrescentado um novo servico na pagina 49
+			verificado os  itens acrescentados >>
+				vagrant@monitor$ cat /etc/nagios-plugins/config/mysql.cfg
+			verificando outro comando >>
+				vagrant@monitor$ /usr/lib/nagios/plugins/check_http --help
+			acrescetando mais itens 51-52 depois lembrar de recarregar o nagios
+
+
 		3.5 - Recebendo alertas
 		3.6 - Um problema atinge produção, e agora?
 
