@@ -160,6 +160,39 @@
 			e apos novamente recarregar o servico				
 
 		3.3 - Explorando os comandos de verificação do Nagios
+
+			Explorar alguns comando instalados no diretorio /usr/lib/nagios/plugins
+
+			vagrant@monitor$ cd /usr/lib/nagios/plugins
+			vagrant@monitor$ ./check_ssh 192.168.33.12
+				SSH OK - OpenSSH_5.9p1 Debian-5ubuntu1 (protocol 2.0)
+			vagrant@monitor$ echo $?
+				0
+			vagrant@monitor$ ./check_ssh 192.168.33.11
+				No route to host
+			vagrant@monitor$ echo $?
+				2
+
+			vagrant@monitor$ ./check_http -H 192.168.33.12
+				HTTP CRITICAL - Unable to open TCP socket
+			vagrant@monitor$ echo $?
+				2
+			vagrant@monitor$ ./check_http -H 192.168.33.12 -p 8080
+				HTTP OK: HTTP/1.1 200 OK - 2134 bytes in 0.007 second response
+				time ...
+			vagrant@monitor$ echo $?
+				0
+
+			Verificar o espaço em disco disponivel >>
+
+			vagrant@monitor$ ./check_disk -H 192.168.33.12 -w 10% -c 5%
+				/usr/lib/nagios/plugins/check_disk: invalid option -- ’H’
+				Unknown argument
+				Usage:
+				check_disk -w limit -c limit [-W limit] [-K limit] ...
+			vagrant@monitor$ ./check_disk -w 10% -c 5%
+				DISK OK - free space: / 74473 MB (97% inode=99%); ...
+
 		3.4 - Adicionando verificações mais específicas
 		3.5 - Recebendo alertas
 		3.6 - Um problema atinge produção, e agora?
