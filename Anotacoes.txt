@@ -51,8 +51,18 @@
 			depois reiniciar o serviço do mysql
 				vagrant@db$ sudo service mysql restart
 
+			Criaçao do db e apos verificando se ocorreu tudo bem >>
+				vagrant@db$ mysqladmin -u root -p create loja_schema
+				vagrant@db$ mysql -u root -p -e "SHOW DATABASES"
 
+			Remover a conta anonima do mysql >>
+				vagrant@db$ mysql -u root -p -e "DELETE FROM mysql.user WHERE user=''; FLUSH PRIVILEGES"
 
+			Criar um usuario loja com a senha lojasecret >>
+				vagrant@db$ mysql -u root -p -e "GRANT ALL PRIVILEGES ON loja_schema.* TO 'loja'@'%' IDENTIFIED BY 'lojasecret';"
+
+			Testando se o usuario foi criado corretamente >>
+				vagrant@db$ mysql -u loja -p loja_schema -e "select database(), user()"
 
 	2.4 Build e deploy da aplicação ---> 28
 
