@@ -112,6 +112,17 @@
 			http://192.168.33.12:8080/devopsnapratica/ 
 			http://192.168.33.12:8080/devopsnapratica/admin/
 
+	3 - Monitoramento
+		
+		3.1 - Instalando o servidor de monitoramento
+		
+
+		3.2 - Monitorando outros servidores
+		3.3 - Explorando os comandos de verificação do Nagios
+		3.4 - Adicionando verificações mais específicas
+		3.5 - Recebendo alertas
+		3.6 - Um problema atinge produção, e agora?
+
 
 
 
