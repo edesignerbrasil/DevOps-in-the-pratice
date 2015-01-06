@@ -238,8 +238,29 @@
 		4.2 - Ferramentas de gerenciamento de configuração
 
 			Detalhes...
-		
+
 		4.3 - Introdução ao Puppet: recursos, provedores, manifestos e dependências
+
+			$ vagrant up db
+			$ vagrant ssh db
+			vagrant@db$
+				Criando um arquivo db.pp diretamente detalhes inseridor ver pg 68
+					vagrant@db$ nano db.pp
+			vagrant@db$ sudo puppet apply db.pp
+
+				Colocando mais algumas informacoes da no db.pp na pg 69
+				depois rodar novamente o comando >>
+					vagrant@db$ sudo puppet apply db.pp
+
+			Depois verificamos se o mysql-server está instalado no sistema
+				vagrant@db$ aptitude show mysql-server
+			Se rodarmos o puppet novamente ele informara que esta instalado tb.
+				vagrant@db$ sudo puppet apply db.pp
+
+			Verificar a lista dos provedores disponiveis para um determinado recurso
+				vagrant@db$ puppet describe package
+
+
 		4.4 - Reinstalando o servidor de banco de dados
 		4.5 - Reinstalando o servidor web
 		4.6 - Fazendo deploy da aplicação
