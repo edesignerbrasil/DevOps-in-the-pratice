@@ -83,9 +83,22 @@
 
 			e reiniciar o tomcat
 				vagrant@web$ sudo service tomcat7 restart
-				
 
 	2.4 Build e deploy da aplicação ---> 28
+
+		Instalando no servidor web algumas ferramentas necessarias
+			vagrant@web$ sudo apt-get install git maven2 openjdk-6-jdk
+
+		Depois baixamos o codigo do Github e executaremos o build rodando o maven
+			vagrant@web$ cd
+			vagrant@web$ git clone https://github.com/dtsato/loja-virtual-devops.git
+				...
+				...
+			vagrant@web$ cd loja-virtual-devops
+			vagrant@web$ export MAVEN_OPTS=-Xmx256m
+			vagrant@web$ mvn install
+				...
+				...
 
 
 
