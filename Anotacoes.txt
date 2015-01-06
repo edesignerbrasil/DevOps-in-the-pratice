@@ -137,6 +137,28 @@
 				http://192.168.33.14/nagios3/
 		
 		3.2 - Monitorando outros servidores
+
+			Criar um novo arquivo para definir as configuracoes >>
+				vagrant@monitor$ sudo nano /etc/nagios3/conf.d/loja_virtual.cfg
+					define host {
+						use generic-host
+						host_name 192.168.33.10
+						hostgroups ssh-servers, debian-servers
+					}
+					define host {
+						use generic-host
+						host_name 192.168.33.12
+						hostgroups ssh-servers, debian-servers
+					}
+
+			Reiniciar o servico >>
+				vagrant@monitor$ sudo service nagios3 reload
+
+			Adicionar nossos servidores a dois novos host groups pg 43-44 >>
+				vagrant@monitor$ sudo nano /etc/nagios3/conf.d/loja_virtual.cfg
+
+			e apos novamente recarregar o servico				
+
 		3.3 - Explorando os comandos de verificação do Nagios
 		3.4 - Adicionando verificações mais específicas
 		3.5 - Recebendo alertas
