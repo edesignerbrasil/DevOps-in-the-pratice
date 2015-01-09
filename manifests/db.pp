@@ -23,3 +23,10 @@ service { "mysql":
 	hasrestart => true,
 	require => Package["mysql-server"],
 }
+
+exec { "loja-schema":
+	unless => "mysql -uroot loja_schema",
+	command => "mysqladmin -uroot create loja_schema",
+	path => "/usr/bin/",
+	require => Service["mysql"],
+}

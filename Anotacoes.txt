@@ -278,6 +278,10 @@
 			 Criar um parametro notify que faz com que toda vez que o recurso for alterado ele execute o servico...
 			 	notify => Service["mysql"],
 
+			 Criamos o schema com a criacao de um recurso exec {...}
+			 	com um novo parametro unless nele que executa um comando de teste caso o codigo de saida seja 0, o 
+			 	comando principal nao ira executar
+
 		4.5 - Reinstalando o servidor web
 		4.6 - Fazendo deploy da aplicação
 
