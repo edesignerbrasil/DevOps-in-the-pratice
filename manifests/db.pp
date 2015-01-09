@@ -14,3 +14,11 @@ file { "/etc/mysql/conf.d/allow_external.cnf":
 	content => template("/vagrant/mainfests/allow_ext.cnf"),
 	require => Package["mysql-server"],
 }
+
+service { "mysql":
+	ensure => running,
+	enable => true,
+	hasstatus => true,
+	hasrestart => true,
+	require => Package["mysql-server"],
+}
