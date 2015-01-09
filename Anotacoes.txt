@@ -270,6 +270,9 @@
 		4.4 - Reinstalando o servidor de banco de dados
 
 			Feitas as alteraçoes solicitadas na pg 73
+			Criado o novo arquivo /manifests/allow_ext.cnf conteudo conforme pg 75,
+			 trocamos o parâmetro content do recurso file para usar o template
+
 		4.5 - Reinstalando o servidor web
 		4.6 - Fazendo deploy da aplicação
 
