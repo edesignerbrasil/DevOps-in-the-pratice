@@ -285,6 +285,8 @@
 			 Depois criamos o recurso para remover a conta conforme pg 78 e usamos o recurso onlyif
 			 	que ira executar o comando principal apenas se o codigo de saida for 0
 
+			 Por fim criamos o recurso para permisao pg 79-80.
+
 		4.5 - Reinstalando o servidor web
 		4.6 - Fazendo deploy da aplicação
 

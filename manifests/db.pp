@@ -25,15 +25,22 @@ service { "mysql":
 }
 
 exec { "loja-schema":
-	unless => "mysql -uroot loja_schema",
+	unless => "mysql -u root loja_schema",
 	command => "mysqladmin -uroot create loja_schema",
 	path => "/usr/bin/",
 	require => Service["mysql"],
 }
 
 exec { "remove-anonymous-user":
-	command => "mysql -uroot -e \"DELETE FROM mysql.user WHERE user=’’; FLUSH PRIVILEGES\"",
+	command => "mysql -u root -e \"DELETE FROM mysql.user WHERE user=’’; FLUSH PRIVILEGES\"",
 	onlyif => "mysql -u’ ’",
 	path => "/usr/bin",
 	require => Service["mysql"],
+}
+
+exec { "loja-user":
+	unless => "mysql -u loja -p lojasecret loja_schema",
+	command => "mysql -uroot -e \"GRANT ALL PRIVILEGES ON loja_schema.* TO 'loja'@'%'' IDENTIFIED BY 'lojasecret';\"",
+	path => "/usr/bin/",
+	require => Exec["loja-schema"],
 }
