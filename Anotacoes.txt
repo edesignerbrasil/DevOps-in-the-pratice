@@ -293,6 +293,16 @@
 			Feitas alteracoes no web.pp depois executado o comando >>
 				$ vagrant up web2
 
+			Copiando os arquivos já configurados na VM web para o diretorio compartilhado pelo vagrant
+				$ vagrant ssh web -- ’sudo cp /var/lib/tomcat7/conf/.keystore \
+				> /vagrant/manifests/’
+				$ vagrant ssh web -- ’sudo cp /var/lib/tomcat7/conf/server.xml \
+				> /vagrant/manifests/’
+				$ vagrant ssh web -- ’sudo cp /etc/default/tomcat7 \
+				> /vagrant/manifests/’
+
+			Em vez de logar passamos o commando com -- o qual executara a solicitacao
+
 		4.6 - Fazendo deploy da aplicação
 
 	5 - Puppet além do básico
