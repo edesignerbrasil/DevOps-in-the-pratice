@@ -260,6 +260,13 @@
 			Verificar a lista dos provedores disponiveis para um determinado recurso
 				vagrant@db$ puppet describe package
 
+			Recomeçar usando Puppet com Vagrant
+				vagrant@db$ logout
+				$ vagrant destroy db
+
+				Criando um novo diretorio com o nome manifests
+					$sudo mkdir manifests
+
 
 		4.4 - Reinstalando o servidor de banco de dados
 		4.5 - Reinstalando o servidor web
