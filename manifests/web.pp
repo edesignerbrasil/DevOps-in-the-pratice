@@ -13,6 +13,7 @@ file { "/var/lib/tomcat7/conf/.keystore":
 	mode => 0640,
 	source => "/vagrant/manifests/.keystore",
 	require => Package["tomcat7"],
+	notify => Service["tomcat7"],
 }
 
 file { "/var/lib/tomcat7/conf/server.xml":
@@ -21,6 +22,7 @@ file { "/var/lib/tomcat7/conf/server.xml":
 	mode => 0644,
 	source => "/vagrant/manifests/server.xml",
 	require => Package["tomcat7"],
+	notify => Service["tomcat7"],
 }
 
 file { "/etc/default/tomcat7":
@@ -28,5 +30,14 @@ file { "/etc/default/tomcat7":
 	group => root,
 	mode => 0644,
 	source => "/vagrant/manifests/tomcat7",
+	require => Package["tomcat7"],
+	notify => Service["tomcat7"],
+}
+
+service { "tomcat7":
+	ensure => running,
+	enable => true,
+	hasstatus => true,
+	hasrestart => true,
 	require => Package["tomcat7"],
 }

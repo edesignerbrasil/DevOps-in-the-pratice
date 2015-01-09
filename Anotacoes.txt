@@ -302,6 +302,8 @@
 				> /vagrant/manifests/’
 
 			Em vez de logar passamos o commando com -- o qual executara a solicitacao
+			Apos declaramos o servico e sua utilizacao pg 86
+				$ vagrant provision web2
 
 		4.6 - Fazendo deploy da aplicação
 
