@@ -288,6 +288,9 @@
 			 Por fim criamos o recurso para permisao pg 79-80.
 
 		4.5 - Reinstalando o servidor web
+
+			Criada uma nova maquina virtual chamada web2 para testes provisorios e alterados os arquivos Vagrantfile e criado o web.pp
+			
 		4.6 - Fazendo deploy da aplicação
 
 	5 - Puppet além do básico
