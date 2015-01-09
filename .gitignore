@@ -1,4 +1,2 @@
 #Ignorar todos os arquivos do diretorio oculto .vagrant
 .vagrant/*
-#Nao subir o arquivo war
-/manifests/devopsnapratica.war
