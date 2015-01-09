@@ -290,7 +290,9 @@
 		4.5 - Reinstalando o servidor web
 
 			Criada uma nova maquina virtual chamada web2 para testes provisorios e alterados os arquivos Vagrantfile e criado o web.pp
-			
+			Feitas alteracoes no web.pp depois executado o comando >>
+				$ vagrant up web2
+
 		4.6 - Fazendo deploy da aplicação
 
 	5 - Puppet além do básico
