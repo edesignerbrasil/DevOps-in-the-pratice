@@ -323,6 +323,9 @@
 			Criada inicialmente a classe mysql-server no db.pp pg 98
 
 		5.2 - Empacotamento e distribuição usando módulos
+
+			Criando o modulo mysql e seus respectivos diretorios
+
 		5.3 - Refatorando o código Puppet do servidor web
 		5.4 - Separação de responsabilidades: infraestrutura vs. aplicação
 		5.5 - Puppet forge: reutilizando módulos da comunidade
