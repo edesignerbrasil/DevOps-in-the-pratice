@@ -1,3 +1,5 @@
+class mysql-server {
+
 exec { "apt-update":
 	command => "/usr/bin/apt-get update"
 }
@@ -24,6 +26,18 @@ service { "mysql":
 	require => Package["mysql-server"],
 }
 
+exec { "remove-anonymous-user":
+	command => "mysql -u root -e \"DELETE FROM mysql.user WHERE user=’’; FLUSH PRIVILEGES\"",
+	onlyif => "mysql -u’ ’",
+	path => "/usr/bin",
+	require => Service["mysql"],
+}
+
+
+}
+
+include mysql-server
+
 exec { "loja-schema":
 	unless => "mysql -u root loja_schema",
 	command => "mysqladmin -uroot create loja_schema",
@@ -31,12 +45,6 @@ exec { "loja-schema":
 	require => Service["mysql"],
 }
 
-exec { "remove-anonymous-user":
-	command => "mysql -u root -e \"DELETE FROM mysql.user WHERE user=’’; FLUSH PRIVILEGES\"",
-	onlyif => "mysql -u’ ’",
-	path => "/usr/bin",
-	require => Service["mysql"],
-}
 
 exec { "loja-user":
 	unless => "mysql -u loja -p lojasecret loja_schema",
