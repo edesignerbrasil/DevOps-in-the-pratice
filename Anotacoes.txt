@@ -311,6 +311,9 @@
 				$ vagrant ssh web -- 'sudo cp /var/lib/tomcat7/conf/context.xml /vagrant/manifests/'
 				$ vagrant ssh web -- 'sudo cp /var/lib/tomcat7/webapps/devopsnapratica.war /vagrant/manifests/'
 
+				$ vagrant provision web2
+				para rodar as alteracoes no manifesto
+
 	5 - Puppet além do básico
 		5.1 - Classes e tipos definidos
 		5.2 - Empacotamento e distribuição usando módulos
