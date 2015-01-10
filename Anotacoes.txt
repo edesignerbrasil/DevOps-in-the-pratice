@@ -317,7 +317,11 @@
 				Alteracoes no Vagrantfile exclusao da VM web2 e atualizacao da VM web
 
 	5 - Puppet além do básico
+		
 		5.1 - Classes e tipos definidos
+
+			Criada inicialmente a classe mysql-server no db.pp pg 98
+
 		5.2 - Empacotamento e distribuição usando módulos
 		5.3 - Refatorando o código Puppet do servidor web
 		5.4 - Separação de responsabilidades: infraestrutura vs. aplicação
