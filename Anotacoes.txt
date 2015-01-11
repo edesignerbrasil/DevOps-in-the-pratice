@@ -325,6 +325,7 @@
 		5.2 - Empacotamento e distribuição usando módulos
 
 			Criando o modulo mysql e seus respectivos diretorios
+			e fazendo as alteracoes conforme o capitulo
 
 		5.3 - Refatorando o código Puppet do servidor web
 		5.4 - Separação de responsabilidades: infraestrutura vs. aplicação
