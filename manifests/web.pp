@@ -1,8 +1,6 @@
-exec { "apt-update":
-	command => "/usr/bin/apt-get update"
-}
+include mysql::client
 
-package { ["mysql-client", "tomcat7"]:
+package { "tomcat7":
 	ensure => installed,
 	require => Exec["apt-update"],
 }
@@ -20,7 +18,7 @@ file { "/var/lib/tomcat7/conf/server.xml":
 	owner => root,
 	group => tomcat7,
 	mode => 0644,
-	source => "/vagrant/manifests/server.xml",
+	source => 'puppet:///modules/tomcat/server.xml',
 	require => Package["tomcat7"],
 	notify => Service["tomcat7"],
 }
@@ -51,7 +49,7 @@ file { "/var/lib/tomcat7/conf/context.xml":
 	owner => root,
 	group => tomcat7,
 	mode => 0644,
-	content => template("/vagrant/manifests/context.xml"),
+	content => template("tomcat/context.xml"),
 	require => Package["tomcat7"],
 	notify => Service["tomcat7"],
 }
