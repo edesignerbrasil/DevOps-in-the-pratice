@@ -13,6 +13,14 @@ class tomcat::server {
 		notify => Service["tomcat7"],
 	}
 
+	file { "/var/lib/tomcat7/conf/server.xml":
+		owner	=> root,
+		group	=> tomcat7,
+		mode	=> 0644,
+		content	=> template("tomcat/server.xml"),
+		require	=> Package["tomcat7"],
+		notify	=> Service["tomcat7"],
+	}
 	service { "tomcat7":
 		ensure => running,
 		enable => true,
