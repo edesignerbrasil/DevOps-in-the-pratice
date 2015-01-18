@@ -18,7 +18,7 @@ class loja_virtual::params {
 		"password" 	=> "lojasecret",
 		"schema"	=> "loja_schema",
 		"driver"	=> "com.mysql.jdbc.Driver",
-		"url"		=> "jdbc:mysql://192.168.33.10:3306/loja_schema",
+		"url"		=> "jdbc:mysql://192.168.33.10:3306/",
 	}
 
 }
