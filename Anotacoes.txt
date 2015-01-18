@@ -330,8 +330,11 @@
 		5.3 - Refatorando o código Puppet do servidor web
 
 			Adicionando conforme captulo ver detalhes
-			
+
 		5.4 - Separação de responsabilidades: infraestrutura vs. aplicação
+
+			Adicionando conforme captulo ver detalhes
+			
 		5.5 - Puppet forge: reutilizando módulos da comunidade
 		5.6 - Conclusão
 
