@@ -1,1 +1,1 @@
-include loja_virtual::web
+include loja_virtual::db
