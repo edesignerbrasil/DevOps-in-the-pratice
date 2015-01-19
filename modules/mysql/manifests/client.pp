@@ -1,10 +1,6 @@
-class mysql::client {
-	exec { "apt-update":
-		command	=> "/usr/bin/apt-get update"
-	}
+class mysql::client {	
 
 	package { "mysql-client":
 		ensure	=> installed,
-		require	=> Exec["apt-update"], 
 	}
 }
